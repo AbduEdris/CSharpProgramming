@@ -1,0 +1,77 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+
+        Stack<int> stack = new Stack<int>();     //stack = variable like x,y,z
+        stack.Push(100);
+        stack.Push(1000);
+        stack.Push(10000);
+
+        Console.WriteLine("--- Stack contents ---");
+        foreach (int i in stack)
+        {
+            Console.WriteLine(i);
+        }
+
+
+        int a = stack.Count;
+        Console.WriteLine("Stack elements are : "+a );
+
+
+
+
+        customer c1 = new customer()
+        {
+            ID = 111,
+            name = "Abdu1",
+            salary = 1000
+        };
+        customer c2 = new customer()
+        {
+            ID = 222,
+            name = "Abdu2",
+            salary = 2000
+        };
+        customer c3 = new customer()
+        {
+            ID = 333,
+            name = "Abdu3",
+            salary = 3000
+        };
+        Stack <customer> s1 = new Stack<customer>();
+        s1.Push(c1);
+        s1.Push(c2);
+        s1.Push(c3);
+
+        customer cc = new customer();
+        cc = s1.Peek();
+        Console.WriteLine("Name" + cc.ID + "\t Name  " + cc.name+ "\t Salary "+ cc.salary);
+
+        foreach (customer cx in s1) {
+
+            Console.WriteLine("Name" + cx.ID + "\t Name  " + cx.name + "\t Salary " + cx.salary);
+
+        }
+    }
+}
+class customer {
+
+public int ID {
+        get;
+        set;
+}
+public string name {
+        get;
+        set;
+}
+public int  salary
+    {
+        get;
+        set;
+    }
+
+}
